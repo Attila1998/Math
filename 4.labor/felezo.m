@@ -13,7 +13,7 @@ if f2 == 0.0
     return ;
 end
 if f1 * f2 > 0
-    error ('A gyok nem az (x1 ,x2) intervallumban van ')
+    error ('A gyok nem az (x1 ,x2) intervallumban van')
 end
 n = ceil ( log(abs( x2 - x1 )/ tol )/ log (2.0)); % --> help ceil
 for i = 1: n
@@ -24,9 +24,12 @@ for i = 1: n
         return
     end
     if f2 * f3 < 0.0
-36 % Kiegesziteni
-37 else
-38 % Kiegesziteni
-39 end
+        % Kiegesziteni x1=x2;
+        %x2=x1/2;
+        %f1=f2;
+        %f2=feval(func,x2);
+    else
+        % Kiegesziteni
+    end
 end
 gyok =( x1 + x2 )/2;

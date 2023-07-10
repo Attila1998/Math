@@ -1,17 +1,11 @@
 function Ih = trapezRek(func,a,b,I2h,k)
-% Rekurziv trapez formula.
-% HASZNALTA: 
-%    Ih = trapezRek(func,a,b,I2h,k)
-% func = a fuggveny amit integralni szeretnenk
-% a,b = az integralasi hatarok.
-% I2h = az elozo lepesben szamolt integral.
 
 if k == 1
-    fa = feval(func,a); %csak ket pontunk van, igy a vegpontokat hat. meg
+    fa = feval(func,a);
     fb = feval(func,b);
-    Ih = (fa + fb)*(b - a)/2.0; % trapez terulete
+    Ih = (fa + fb)*(b - a)/2.0;
 else
-n = 2^(k -2 ); % az uj pontok szama
+n = 2^(k -2 );
 h = (b - a)/n ; 
 x = a + h/2.0; 
 sum = 0.0;
